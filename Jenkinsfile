@@ -1,10 +1,11 @@
 pipeline{
     agent any
-    stages{
 
-        environment {
+    environment {
             DOCKER_CRED=credentials('dockerhub-creds')
         }
+        
+    stages{
 
         stage('Checkout'){
             steps{
